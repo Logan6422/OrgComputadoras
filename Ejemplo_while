@@ -1,0 +1,22 @@
+#//while//
+#det la potencia de 2^x = 128
+
+#int pow = 1
+#int x = 0
+#while(pow != 128){
+#pow = pow*2
+#x = x+1
+#}
+
+#s0 = pow
+#s1 = x
+.text
+	addi s0,zero,1
+	add s1,zero,zero
+	add t0,zero,128    #variable de corte del while
+	beq s0,t0,done
+while:
+	slli s0,s0,1
+	addi s1,s1,1
+	j while
+done

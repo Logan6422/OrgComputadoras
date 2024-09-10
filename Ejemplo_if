@@ -1,0 +1,15 @@
+#Ejemplo 
+#If(manzanas == naranjas)
+#f = g+h
+#manzanas = naranjas -h
+
+
+#s0 = manzana
+#s1 = naranjas
+#s2 = f
+#s3 = g
+#s4 = h
+.text
+	bne s0,s1,linx   #Condicion invertida
+	add s2,s3,s4
+linx: sub s0,s1,s4

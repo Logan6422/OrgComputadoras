@@ -1,0 +1,14 @@
+#If/else
+#if(manzana == naranjas)
+#f = g+h
+#else
+#manzana = naranja-h
+
+.text
+	bne s0,s1,linX    #If not equal va a linX
+	add s2,s3,s4	  #sino ejecuta y salta a linY
+	j linY             
+linX: 
+	sub s0,s1,s4
+linY: 
+	
