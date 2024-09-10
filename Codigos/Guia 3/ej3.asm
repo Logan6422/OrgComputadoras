@@ -11,7 +11,20 @@ do:
  	#resultado positivo del and
  	
 #c) t1 != t2 || t1 !=t3
-	bne t1,t2,
+	bne t1,t2,do
+	bne t1,t3,do
+do:
+	#resultado positivo del or
+	
 #d) t1 > 6
+	addi t2,t2,6
+	blt t2,t1,done
+	
 #e) t1 > 10 && t1 < 30
+	addi s0,s0,10
+	addi s1,s1,30
+	blt s0,t1,andd
+	j done		#si la primera condicion no se cumple termina el if
+andd:
+	blt s1,t1,done   #resultado positivo del and
 done:
